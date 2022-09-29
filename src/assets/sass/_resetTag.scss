@@ -1,0 +1,15 @@
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+p {
+    font-size: clamp(18px, 3vw, 20px);
+}
+
+a {
+    text-decoration: none;
+}

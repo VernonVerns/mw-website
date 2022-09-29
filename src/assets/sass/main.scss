@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+$fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
+
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+
+$text-color: #9e9f9e;
+$white-color: #ffffff;
+$primary-color: #b88510;
+$black-color: #000000;
+$grey-text-color: #b3b3b3;
+$transition: all 0.65s ease-in-out;
+$box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+%btn-style {
+    border: 1px solid transparent;
+    background-color: transparent;
+    box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 0.6em 2.5em;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: $transition;
+    display: inline-block;
+
+    &:hover {
+        transform: scale(0.98) !important;
+        transition: $transition;
+    }
+}
+
+.main-btn {
+    @extend %btn-style;
+    color: $white-color  !important;
+    background-color: $primary-color;
+}
+
+.border-btn {
+    @extend %btn-style;
+    border-color: $primary-color;
+    box-shadow: none !important;
+}
+
+.no-border-btn {
+    @extend %btn-style;
+    color: $black-color  !important;
+    padding: 0.6em 0 !important;
+    box-shadow: none !important;
+}
+
+#navigation_bar {
+    background-color: transparent;
+    padding: 1em 3em;
+
+    .navbar-brand {
+        img {
+            width: 100px;
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            margin-right: 1em;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .nav-link {
+                color: $black-color;
+                font-size: 18px;
+                font-weight: 500;
+                text-transform: capitalize;
+                transition: $transition;
+                padding: 0.5em 1em;
+
+
+                &:hover {
+                    color: $primary-color;
+                    transition: $transition;
+                }
+            }
+
+            &.contact-btn {
+                margin-left: 2em;
+
+                .nav-link {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.scripted-style {
+    font-family: 'Passions Conflict', cursive;
+    font-size: clamp(30px,3vw,45px);
+    color: $white-color;
+    margin: 0;
+
+    span {
+        font-family: 'Roboto Condensed', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+.main-title {
+    font-size: clamp(30px, 5vw, 50px);
+    font-weight: 600;
+    margin: 0;
+    color: $white-color;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.social-side {
+    a {
+        display: inline-block;
+        color: $primary-color;
+        font-size: clamp(18px,3vw, 20px);
+        margin-right: 1em;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.footer-part {
+    p {
+        color: $text-color;
+        margin-bottom: 0 !important;
+        font-size: 14px;
+    }
+
+    .social-side {
+        text-align: right;
+    }
+}
+
+@import 'home';
+@import '_resetTag';
+@import 'responsiveness';
